@@ -1,0 +1,80 @@
+@import "variables";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "mixins";
+@import "fonts";
+@import "global";
+@import "blocks";
+
+a[href^="mailto:"],
+a[href^="tel:"] {
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a[href^="mailto:"] {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+.checkin {
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.footer {
+  &____wrap-link {
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__copyright {
+    font-size: 14.2px;
+    line-height: 20px;
+
+    & > div {
+      margin-bottom: 4px;
+    }
+  }
+}
