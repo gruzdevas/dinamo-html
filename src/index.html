@@ -10,29 +10,87 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-  <div class="container">
-  </div>
-  <header class="site-header">
-
-    <div class="site-header__logo logo">
-      <img src="img/logo.svg" class="logo__img" width="289" height="288" alt="logo">
+  <header class="site-header bg-light">
+    <div class="container-fluid">
+      <div class="site-header__logo logo d-flex">
+        <img src="img/logo.svg" class="site-header__logo__img" width="54" height="83" alt="logo">
+      </div>
     </div>
   </header>
 
   <main class="flex-shrink-0">
-    <div class="checkin">
+    <div class="container-fluid">
+      <div class="checkin">
+        <h1 class="checkin__title">Регистрация</h1>
 
-      <h1 class="checkin__title">Регистрация</h1>
-      <h2 class="checkin__subtitle">Аккаунт болельщика Динамо Москва</h2>
-      <div class="checkin__descr">Покупайте билеты и абонементы на матчи клуба, форму и аксессуары с логотипом Динамо и
-        получайте эксклюзивные предложени с аккаунтом футбольного клуба «Динамо Москва»</div>
+        <div class="row">
+
+          <h2 class="checkin__subtitle">Аккаунт болельщика Динамо Москва</h2>
+
+          <div class="pic">
+            <svg class="pic__img m-auto" width="66" height="101" viewBox="0 0 66 101" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M40.129 38.31c3.955-10.138-.435-16.406-5.228-16.124-4.388.26-9.387 5.499-10.683 14.998-1.302.16-2.594.396-3.869.705C13.23 39.636-1.339 47.8.237 63.796c.72 7.305 8.43 9.635 13.022 7.76 3.158-1.29 5.25-4.048 5.41-6.424 0 0-4.942 1.145-6.667-4.447-1.567-5.074 1.12-16.105 11.9-19.068-.01.867.007 1.76.056 2.68.15 2.786.41 4.965.696 7.095a64.489 64.489 0 01-6.591 3.373l.054 5.663s3.146-1.604 7.13-4.506c.435 3.686.775 8.216.669 15.808-.14 10.007-.97 15.973-3.26 19.974-3.621-1.432-8.065-3.195-10.755-3.405-3.957-.305-7.315 1.566-7.476 5.06-.095 2.035.43 4.364 3.935 6.19 3.643 1.898 9.668 2.031 15.875-3.411 3.361 1.745 7.521 3.535 11.784 4.114 6.478.877 23.313-2.863 28.09-22.111 5.324-21.448-10.565-35.941-23.98-39.83zm-5.275-9.56c2.785.35 3.526 4.386 2.293 8.855a43.202 43.202 0 00-8.963-.714c1.304-5.492 4.16-8.456 6.673-8.143l-.003.003zm-7.182 18.698a35.753 35.753 0 01-.113-6.481c2.845-.256 5.538-.06 8.036.528-.201.379-.416.754-.645 1.124-1.538 2.475-4.21 4.76-6.982 6.672a17.569 17.569 0 01-.296-1.843zM17.552 96.8c-3.824 2.33-7.522-.207-7.538-2.263-.02-2.801 3.107-4.072 7.444-2.149.704.313 1.853.999 3.323 1.846-.919.971-1.987 1.809-3.231 2.568l.002-.002zm31.524-12.208c-4.008 6.823-12.725 11.595-22.119 8.715 2.127-2.6 4.616-6.624 7.744-13.64 4.535-10.174 6.205-18.479 6.205-18.479s-8.19-1.15-11.736-8.375c3.303-2.842 6.672-6.4 9.052-10.532 8.149 3.006 13.766 10.558 15.003 20.545.82 6.62.421 13.98-4.15 21.763"
+                fill="currentColor" />
+              <path
+                d="M22.872 0l2.158 6.68h6.991l-5.66 4.267 2.164 6.744-5.653-4.091-5.66 4.14 2.167-6.801-5.654-4.26h6.99L22.873 0zM42.396 0l2.157 6.68h6.99l-5.656 4.269 2.168 6.745-5.66-4.092-5.655 4.142 2.165-6.803-5.66-4.26h6.995L42.395 0z"
+                fill="#BFA069" />
+            </svg>
+          </div>
+          <div class="checkin__descr">Покупайте билеты и абонементы на матчи клуба, форму и аксессуары с логотипом
+            Динамо
+            и
+            получайте эксклюзивные предложени с аккаунтом футбольного клуба «Динамо Москва»</div>
+
+          <div class="checkin__question"><span>Уже есть аккаунт? </span><a href="#" class="checkin__link">Войти</a>
+          </div>
+
+          <div class="checkin__form">
+
+            <form>
+              <div class="mb-3">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="checkin__second_name" class="form-label">Фамилия<sup>*</sup></label>
+                    <input type="text" class="form-control" id="checkin__second_name" value="" placeholder="" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="checkin__name" class="form-label">Имя<sup>*</sup></label>
+                    <input type="text" class="form-control" id="checkin__name" value="" placeholder="Сергей" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <label for="checkin__email" class="form-label">E-mail<sup>*</sup></label>
+                  <input type="email" class="form-control" id="checkin__email" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
     </div>
   </main>
 
   <footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="footer__column col-12">
           <div class="footer__title">ФК «Динамо Москва»</div>
           <div class="footer__lists">
             <div class="footer__wrap-link"><a class="footer__link" href="#">Официальный сайт</a></div>
@@ -40,7 +98,7 @@
             <div class="footer__wrap-link"><a class="footer__link" href="#">Магазин</a></div>
           </div>
         </div>
-        <div class="col-12">
+        <div class="footer__column col-12">
           <div class="footer__title">Мы в соцсетях</div>
           <div class="footer__lists">
             <div class="footer__wrap-link"><a class="footer__link" href="#">Facebook</a></div>
@@ -52,25 +110,22 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="footer__copyright">
-      <div class="container">
+      <div class="footer__copyright">
         <div class="row">
           <div class="col-12 col-md-6">
-            <div class="copyright">© Copyright 1923-2020</div>
-            <div>Все права защищены.</divp>
-            </div>
+            <div class="copyright">© Copyright 1923—2020 ФК «Динамо-Москва».</div>
+            <div>Все права защищены.</div>
           </div>
+
           <div class="col-12 col-lg-6  align-self-end">
             <div class=" text-lg-end">Дизайн и разработка — Func.</div>
           </div>
-
         </div>
       </div>
     </div>
   </footer>
-  </footer>
+  </div>
 
 </body>
 <script src="js/script.js"></script>

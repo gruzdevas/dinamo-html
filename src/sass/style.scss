@@ -25,12 +25,34 @@ a.btn {
   text-decoration: none;
 }
 
+.site-header {
+  padding: 10px 0 9px;
+  margin-bottom: 15px;
+
+  &__logo {
+    &__img {
+      margin: 0 auto;
+      max-width: 20px;
+      height: auto;
+    }
+  }
+}
+
+.pic {
+  display: flex;
+  min-height: 240px;
+  background: $blue;
+  color: $white;
+  margin-bottom: 20px;
+}
+
 .checkin {
   &__title {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 36px;
     line-height: 40px;
+    border-bottom: 1px solid $blue;
   }
 
   &__subtitle {
@@ -43,11 +65,29 @@ a.btn {
   &__descr {
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 18px;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: bottom;
+    border-bottom: 1px solid $blue;
+    overflow: hidden;
+  }
+
+  &__form {
+    border-top: 1px solid $blue;
+    padding: 50px 0;
   }
 }
 
 .footer {
-  &____wrap-link {
+  &__column {
+    margin-bottom: 38px;
+  }
+
+  &__wrap-link {
     margin-bottom: 4px;
   }
 
@@ -74,7 +114,11 @@ a.btn {
     line-height: 20px;
 
     & > div {
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
+  }
+
+  &__wrap-link {
+    margin-bottom: 4px;
   }
 }
