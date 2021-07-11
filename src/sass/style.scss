@@ -43,17 +43,30 @@ a.btn {
 }
 
 .pic {
-  display: flex;
-  min-height: 240px;
-  background: $blue;
-  color: $white;
-  margin-bottom: 20px;
+  @include media-breakpoint-only(lg) {
+    padding-right: 0;
+  }
+
+  &__wrap {
+    background: $blue;
+    display: flex;
+    min-height: 240px;
+    color: $white;
+  }
 }
 
 .checkin {
   &__header {
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
+    border-bottom: 1px solid $blue;
+
+    @include media-breakpoint-up(lg) {
+      border-bottom: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      border-bottom: 1px solid $blue;
+    }
   }
 
   &__title {
@@ -87,8 +100,20 @@ a.btn {
   }
 
   &__form {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
+    border-top: 1px solid $blue;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 20px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $blue;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border-top: 0;
+      border-bottom: 0;
+    }
   }
 
   &__password {
@@ -111,7 +136,6 @@ a.btn {
     justify-content: center;
     align-items: center;
     width: 100%;
-    // padding: 10px 30px;
   }
 }
 
