@@ -19,15 +19,24 @@
   </header>
 
   <main class="flex-shrink-0">
-    <div class="container-fluid">
-      <div class="checkin">
-        <h1 class="checkin__title">Регистрация</h1>
+    <div class="checkin">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="checkin__title">Регистрация</h1>
+          </div>
+        </div>
+      </div>
 
+      <div class="container-fluid">
         <div class="row">
 
-          <h2 class="checkin__subtitle">Аккаунт болельщика Динамо Москва</h2>
+          <div class="col-12">
+            <h2 class="checkin__subtitle">Аккаунт болельщика Динамо Москва</h2>
+          </div>
 
-          <div class="pic">
+
+          <div class="pic col-12">
             <svg class="pic__img m-auto" width="66" height="101" viewBox="0 0 66 101" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -38,59 +47,138 @@
                 fill="#BFA069" />
             </svg>
           </div>
-          <div class="checkin__descr">Покупайте билеты и абонементы на матчи клуба, форму и аксессуары с логотипом
+          <div class="checkin__descr col-12">Покупайте билеты и абонементы на матчи клуба, форму и аксессуары с
+            логотипом
             Динамо
             и
             получайте эксклюзивные предложени с аккаунтом футбольного клуба «Динамо Москва»</div>
 
-          <div class="checkin__question"><span>Уже есть аккаунт? </span><a href="#" class="checkin__link">Войти</a>
+          <div class="checkin__question col-12"><span>Уже есть аккаунт? </span><a href="#"
+              class="checkin__link">Войти</a>
           </div>
 
-          <div class="checkin__form">
+          <div class="checkin__form col-12">
 
             <form>
               <div class="mb-3">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="checkin__second_name" class="form-label">Фамилия<sup>*</sup></label>
-                    <input type="text" class="form-control" id="checkin__second_name" value="" placeholder="" required>
-                    <div class="valid-feedback">
-                      Looks good!
+                <div class="container-fluiid">
+                  <div class="row g-3">
+                    <div class="col-lg-6">
+                      <label for="checkin__second_name" class="form-label">Фамилия<sup>*</sup></label>
+                      <input type="text" class="form-control" id="checkin__second_name_help" value="" placeholder=""
+                        aria-describedby="checkin__second_name" aria-required="true">
+                      <div id="checkin__second_name_help" class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <label for="checkin__name" class="form-label">Имя<sup>*</sup></label>
-                    <input type="text" class="form-control" id="checkin__name" value="" placeholder="Сергей" required>
-                    <div class="valid-feedback">
-                      Looks good!
+                    <div class="col-lg-6">
+                      <label for="checkin__name" class="form-label">Имя<sup>*</sup></label>
+                      <input type="text" class="form-control" id="checkin__name" value="" placeholder="Сергей"
+                        aria-describedby="checkin__name_help" aria-required="true">
+                      <div id="checkin__name_help" class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
+
+                    <div class="col-lg-6">
+                      <label for="checkin__phone" class="form-label">Номер телефона<sup>*</sup></label>
+                      <input type="text" class="form-control" id="checkin__phone" value=""
+                        placeholder="+7 (919) 230-15-23" aria-describedby="checkin__phone_help" aria-required="true">
+                      <div id="checkin__phone_help" class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <label for="checkin__email" class="form-label">E-mail<sup>*</sup></label>
+                      <input type="email" class="form-control" id="checkin__email" value="" placeholder="mail@mail.com"
+                        aria-describedby="checkin__email_help" aria-required="true">
+                      <div id="checkin__email_help" class="valid-feedback">We'll never share your email with anyone
+                        else.
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <label for="checkin__dob" class="form-label">Дата рождения<sup>*</sup></label>
+                      <input type="date" class="form-control" id="checkin__dob" value="" placeholder="ДД/ММ/ГГГГ"
+                        aria-describedby="checkin__dob_help" aria-required="true">
+                    </div>
+
+
+                    <div class="col-lg-6">
+                      <label for="checkin__gender" class="form-label">Пол<sup>*</sup></label>
+
+                      <div class="input-group">
+                        <div class="form-control">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                              value="Мужской">
+                            <label class="form-check-label" for="inlineRadio1">Мужской</label>
+                          </div>
+                        </div>
+
+                        <div class="form-control">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                              value="Женский">
+                            <label class="form-check-label" for="inlineRadio2">Женский</label>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                      <label for="checkin__password" class="form-label">Новый пароль<sup>*</sup></label>
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control checkin__password__input" id="checkin__password"
+                          value="PasswordFake" aria-describedby="checkin__password_help" aria-required="true">
+                        <span class="input-group-text checkin__password__icon">
+                          <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11.5" r="2.75" stroke="#0959A1" stroke-width="1.5" />
+                            <path d="M20.5 11.5c-1.834-3.575-5.4-6-9.5-6s-7.666 2.425-9.5 6" stroke="#0959A1"
+                              stroke-width="1.5" stroke-linecap="round" />
+                          </svg></span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <label for="checkin__password__repeat" class="form-label">Повторите пароль<sup>*</sup></label>
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control checkin__password__input"
+                          id="checkin__password__repeat" value="PasswordFake"
+                          aria-describedby="ccheckin__password__repeat_help" aria-required="true">
+                        <span class="input-group-text checkin__password__icon">
+                          <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11.5" r="2.75" stroke="#0959A1" stroke-width="1.5" />
+                            <path d="M20.5 11.5c-1.834-3.575-5.4-6-9.5-6s-7.666 2.425-9.5 6" stroke="#0959A1"
+                              stroke-width="1.5" stroke-linecap="round" />
+                          </svg></span>
+                      </div>
+                    </div>
+
                   </div>
-                  <label for="checkin__email" class="form-label">E-mail<sup>*</sup></label>
-                  <input type="email" class="form-control" id="checkin__email" aria-describedby="emailHelp" required>
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+                <div class="col-12"><button type="submit"
+                    class="checkin__btn btn btn-primary">Зарегистрироваться</button></div>
+
+
             </form>
           </div>
-
         </div>
       </div>
+
     </div>
   </main>
 
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container-fluid">
-      <div class="row">
-        <div class="footer__column col-12">
+      <div class="row gx-md-5">
+        <div class="footer__column col-lg-6">
           <div class="footer__title">ФК «Динамо Москва»</div>
           <div class="footer__lists">
             <div class="footer__wrap-link"><a class="footer__link" href="#">Официальный сайт</a></div>
@@ -98,7 +186,7 @@
             <div class="footer__wrap-link"><a class="footer__link" href="#">Магазин</a></div>
           </div>
         </div>
-        <div class="footer__column col-12">
+        <div class="footer__column col-lg-6">
           <div class="footer__title">Мы в соцсетях</div>
           <div class="footer__lists">
             <div class="footer__wrap-link"><a class="footer__link" href="#">Facebook</a></div>

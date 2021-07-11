@@ -21,6 +21,10 @@ a[href^="mailto:"] {
   }
 }
 
+.form-control {
+  border-radius: 0;
+}
+
 a.btn {
   text-decoration: none;
 }
@@ -79,6 +83,29 @@ a.btn {
   &__form {
     border-top: 1px solid $blue;
     padding: 50px 0;
+  }
+
+  &__password {
+    &__input {
+      border-right-color: transparent;
+    }
+
+    &__icon {
+      background-color: transparent;
+      border-radius: 0;
+      border-left-color: transparent;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // padding: 10px 30px;
   }
 }
 
