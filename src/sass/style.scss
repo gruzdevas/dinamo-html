@@ -51,12 +51,17 @@ a.btn {
 }
 
 .checkin {
+  &__header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
   &__title {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 36px;
     line-height: 40px;
-    border-bottom: 1px solid $blue;
+    margin-bottom: 0;
   }
 
   &__subtitle {
@@ -64,6 +69,7 @@ a.btn {
     font-weight: 600;
     font-size: 26px;
     line-height: 32px;
+    margin-bottom: 20px;
   }
 
   &__descr {
@@ -81,8 +87,8 @@ a.btn {
   }
 
   &__form {
-    border-top: 1px solid $blue;
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   &__password {
