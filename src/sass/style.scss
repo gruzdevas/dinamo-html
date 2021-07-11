@@ -33,11 +33,19 @@ a.btn {
   padding: 10px 0 9px;
   margin-bottom: 15px;
 
+  @include media-breakpoint-up(lg) {
+    padding: 19px 0 18px;
+  }
+
   &__logo {
     &__img {
       margin: 0 auto;
       max-width: 20px;
       height: auto;
+
+      @include media-breakpoint-up(lg) {
+        max-width: 54px;
+      }
     }
   }
 }
@@ -140,6 +148,9 @@ a.btn {
 }
 
 .footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
   &__column {
     margin-bottom: 38px;
   }
