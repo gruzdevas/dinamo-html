@@ -62,7 +62,7 @@
             <form>
               <div class="mb-3">
                 <div class="container-fluiid">
-                  <div class="row g-3">
+                  <div class="row align-items-end g-3">
                     <div class="col-lg-6">
                       <label for="checkin__second_name" class="form-label">Фамилия<sup>*</sup></label>
                       <input type="text" class="form-control" id="checkin__second_name_help" value="" placeholder=""
@@ -160,13 +160,46 @@
                       </div>
                     </div>
 
+                    <div class="col-12">
+                      <div class="container-fluid">
+                        <div class="row g-3">
+                          <div class="col-lg-6 order-last order-lg-first"><sup>*</sup>Обязательные поля</div>
+
+                          <div class="col-lg-6 order-first order-lg-last">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="checkin__subscription">
+                              <label class="form-check-label" for="checkin__subscription">
+                                Хочу получать информационные сообщения и рассылки от ФК «Динамо Москва»
+                              </label>
+                              <div class="invalid-feedback">
+                                You must agree before submitting.
+                              </div>
+                            </div>
+
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="checkin__agree" required>
+                              <label class="form-check-label" for="checkin__agree">
+                                Согласие с условиями «Политики конфиденциальности»
+                              </label>
+                              <div class="invalid-feedback">
+                                Это обязательное поле
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-12"><button type="submit"
+                        class="checkin__btn btn btn-primary">Зарегистрироваться</button></div>
                   </div>
+
+
+
                 </div>
-
-                <div class="col-12"><button type="submit"
-                    class="checkin__btn btn btn-primary">Зарегистрироваться</button></div>
-
-
             </form>
           </div>
         </div>
