@@ -55,17 +55,46 @@ a[href^="mailto:"] {
   border-radius: 0;
 }
 
-.is-invalid {
-  color: $red;
+.label_wrap {
+  display: flex;
+  justify-content: space-between;
 
-  & ~ * {
+  .invalid_feedback {
+    @extend .form-label;
+    flex: 1 0 0%;
     color: $red;
+    text-align: right;
   }
 
-  & ~ .input-group-text {
-    border-color: $red;
+  .form-label {
+    flex: 1 0 0%;
   }
 }
+.invalid_feedback {
+  display: none;
+}
+
+.is-invalid {
+  .invalid_feedback {
+    display: block;
+  }
+
+  .form-control {
+    border-color: $red;
+    color: $red;
+  }
+}
+// .is-invalid {
+//   color: $red;
+
+//   & ~ * {
+//     color: $red;
+//   }
+
+//   & ~ .input-group-text {
+//     border-color: $red;
+//   }
+// }
 
 a.btn {
   text-decoration: none;
@@ -103,6 +132,7 @@ a.btn {
     display: flex;
     min-height: 240px;
     color: $white;
+    margin-bottom: 20px;
   }
 }
 
@@ -147,7 +177,11 @@ a.btn {
   &__descr {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
+
+    &__text {
+      margin-bottom: 20px;
+    }
   }
 
   &__link {
@@ -159,7 +193,7 @@ a.btn {
   }
 
   &__form {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 50px;
     border-top: 1px solid $blue;
 
@@ -178,6 +212,15 @@ a.btn {
   &__password {
     &__input {
       border-right-color: transparent !important;
+    }
+
+    &__input-2 {
+      // background-image: url(../img/password-icon.svg);
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11.5' r='2.75' stroke='%230959A1' stroke-width='1.5'/%3E%3Cpath d='M20.5 11.5C18.6658 7.92524 15.0993 5.5 11 5.5C6.90074 5.5 3.33417 7.92524 1.5 11.5' stroke='%230959A1' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      padding-right: $input-height-inner;
+      background-repeat: no-repeat;
+      background-position: right $input-height-inner-quarter center;
+      background-size: $input-height-inner-half $input-height-inner-half;
     }
 
     &__icon {
@@ -200,10 +243,10 @@ a.btn {
 
 .footer {
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 
   &__column {
-    margin-bottom: 38px;
+    margin-bottom: 34px;
   }
 
   &__wrap-link {
@@ -232,8 +275,12 @@ a.btn {
     font-size: 14.2px;
     line-height: 20px;
 
-    & > div {
-      margin-bottom: 5px;
+    &__txt {
+      margin-bottom: 12px;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
     }
   }
 

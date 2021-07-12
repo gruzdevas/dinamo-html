@@ -40,7 +40,7 @@
                 <h2 class="checkin__subtitle">Аккаунт болельщика Динамо Москва</h2>
 
                 <div class="checkin__descr d-none d-lg-block">
-                  <div>Покупайте билеты и абонементы на матчи клуба, форму и
+                  <div class="checkin__descr__text">Покупайте билеты и абонементы на матчи клуба, форму и
                     аксессуары с логотипом Динамо и получайте эксклюзивные предложени с аккаунтом футбольного клуба
                     «Динамо
                     Москва»</div>
@@ -65,7 +65,7 @@
               </div>
 
               <div class="checkin__descr col-lg-6 d-lg-none">
-                <div>Покупайте билеты и абонементы на матчи клуба, форму и
+                <div class="checkin__descr__text">Покупайте билеты и абонементы на матчи клуба, форму и
                   аксессуары с логотипом Динамо и получайте эксклюзивные предложени с аккаунтом футбольного клуба
                   «Динамо
                   Москва»</div>
@@ -78,7 +78,7 @@
           </div>
 
           <div class="checkin__form col-12 col-xl-8 order-lg-1 ">
-            <form class="row align-items-end g-3 needs-validation novalidate">
+            <form class="row g-3 needs-validation novalidate">
               <div class="col-lg-6">
                 <label for="checkin__second_name" class="form-label">Фамилия<sup>*</sup></label>
                 <input type="text" class="form-control" id="checkin__second_name_help" value="" placeholder="" required>
@@ -88,7 +88,7 @@
               <div class="col-lg-6">
                 <label for="checkin__name" class="form-label">Имя<sup>*</sup></label>
                 <input type="text" class="form-control" id="checkin__name" value="" placeholder="Сергей" required>
-                <div class="invalid-feedback">Обязательное поле</div>
+                <div class="invalid_feedback">Обязательное поле</div>
               </div>
 
               <div class="col-lg-6">
@@ -100,21 +100,21 @@
 
               <div class="col-lg-6">
                 <label for="checkin__email" class="form-label">E-mail<sup>*</sup></label>
-                <input type="email" class="form-control" id="checkin__email" value="" placeholder="mail@mail.com"
-                  required>
-                <div class="invalid-feedback">Обязательное поле</div>
+                <input type="email" class="form-control is-invalid" id="checkin__email" value=""
+                  placeholder="mail@mail.com" required>
+                <div class="invalid_feedback">Обязательное поле</div>
               </div>
 
               <div class="col-lg-6">
                 <label for="checkin__dob" class="form-label">Дата рождения<sup>*</sup></label>
                 <input type="date" class="form-control" id="checkin__dob" value="" placeholder="ДД/ММ/ГГГГ" required>
-                <div class="invalid-feedback">Обязательное поле</div>
+                <div class="invalid_feedback">Обязательное поле</div>
               </div>
 
               <div class="col-lg-6">
                 <label for="checkin__gender" class="form-label">Пол<sup>*</sup></label>
 
-                <div class="input-group">
+                <div class="input-group is-invalid">
                   <div class="form-control">
                     <div class="form-check mb-0">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
@@ -130,11 +130,24 @@
                       <label class="form-check-label" for="inlineRadio2">Женский</label>
                     </div>
                   </div>
+                  <div class="invalid_feedback">Обязательное поле</div>
                 </div>
 
               </div>
 
+
               <div class="col-lg-6">
+                <div class="input_fields_wrap is-invalid">
+                  <div class="label_wrap">
+                    <label for="checkin__password" class="form-label">Новый пароль<sup>*</sup></label>
+                    <div class="invalid_feedback">Обязательное поле</div>
+                  </div>
+                  <input type="password" class="form-control checkin__password__input-2" id="checkin__password"
+                    value="PasswordFake" required>
+                </div>
+              </div>
+
+              <!-- <div class="col-lg-6">
                 <label for="checkin__password" class="form-label">Новый пароль<sup>*</sup></label>
                 <div class="input-group mb-3">
                   <input type="password" class="form-control checkin__password__input is-invalid" id="checkin__password"
@@ -146,22 +159,21 @@
                         stroke-width="1.5" stroke-linecap="round" />
                     </svg></span>
                 </div>
-              </div>
+              </div> -->
+
 
               <div class="col-lg-6">
                 <label for="checkin__password__repeat" class="form-label">Повторите пароль<sup>*</sup></label>
-                <div class="invalid-feedback">Пароли не совпадают</div>
-
                 <div class="input-group mb-3">
-                  <input type="password" class="form-control checkin__password__input" id="checkin__password__repeat"
-                    value="PasswordFake" required>
+                  <input type="password" class="form-control checkin__password__input is-invalid"
+                    id="checkin__password__repeat" value="PasswordFake" required>
                   <span class="input-group-text checkin__password__icon">
                     <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="11" cy="11.5" r="2.75" stroke="currentColor" stroke-width="1.5" />
                       <path d="M20.5 11.5c-1.834-3.575-5.4-6-9.5-6s-7.666 2.425-9.5 6" stroke="currentColor"
                         stroke-width="1.5" stroke-linecap="round" />
                     </svg></span>
-                  <!-- <div class="invalid-feedback">Пароли не совпадают</div> -->
+                  <div class="invalid_feedback">Пароли не совпадают</div>
                 </div>
               </div>
 
@@ -232,8 +244,8 @@
       <div class="footer__copyright">
         <div class="row">
           <div class="col-12 col-md-6">
-            <div class="copyright">© Copyright 1923—2020 ФК «Динамо-Москва».</div>
-            <div>Все права защищены.</div>
+            <div class="copyright">© 1923—2020 ФК «Динамо-Москва».</div>
+            <div class="footer__copyright__txt">Все права защищены.</div>
           </div>
 
           <div class="col-12 col-lg-6  align-self-end">
