@@ -62,7 +62,6 @@ a[href^="mailto:"] {
   .invalid_feedback {
     @extend .form-label;
     flex: 1 0 0%;
-    color: $red;
     text-align: right;
   }
 
@@ -70,6 +69,7 @@ a[href^="mailto:"] {
     flex: 1 0 0%;
   }
 }
+
 .invalid_feedback {
   display: none;
 }
@@ -77,6 +77,7 @@ a[href^="mailto:"] {
 .is-invalid {
   .invalid_feedback {
     display: block;
+    color: $red;
   }
 
   .form-control {
@@ -84,17 +85,12 @@ a[href^="mailto:"] {
     color: $red;
   }
 }
-// .is-invalid {
-//   color: $red;
 
-//   & ~ * {
-//     color: $red;
-//   }
-
-//   & ~ .input-group-text {
-//     border-color: $red;
-//   }
-// }
+.form-check_wrap {
+  .form-check {
+    margin-bottom: 10px;
+  }
+}
 
 a.btn {
   text-decoration: none;
@@ -211,16 +207,15 @@ a.btn {
 
   &__password {
     &__input {
-      border-right-color: transparent !important;
-    }
-
-    &__input-2 {
-      // background-image: url(../img/password-icon.svg);
       background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11.5' r='2.75' stroke='%230959A1' stroke-width='1.5'/%3E%3Cpath d='M20.5 11.5C18.6658 7.92524 15.0993 5.5 11 5.5C6.90074 5.5 3.33417 7.92524 1.5 11.5' stroke='%230959A1' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
       padding-right: $input-height-inner;
       background-repeat: no-repeat;
       background-position: right $input-height-inner-quarter center;
       background-size: $input-height-inner-half $input-height-inner-half;
+
+      .is-invalid & {
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11.5' r='2.75' stroke='%23EB5757' stroke-width='1.5'/%3E%3Cpath d='M20.5 11.5C18.6658 7.92524 15.0993 5.5 11 5.5C6.90074 5.5 3.33417 7.92524 1.5 11.5' stroke='%23EB5757' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      }
     }
 
     &__icon {

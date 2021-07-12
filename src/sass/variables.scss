@@ -15,15 +15,6 @@ $container-max-widths: (
   xxl: 1320px,
 );
 
-$font-family-base: TT Hoves;
-$enable-validation-icons: false;
-
-$grid-gutter-width: 1.875rem;
-$border-radius: 20px;
-$form-check-input-border-radius: 0;
-$btn-padding-y: 0.563rem;
-$input-padding-y: 0.5625rem;
-
 $gold: #bfa069;
 $red: #eb5757;
 
@@ -33,6 +24,17 @@ $blue: #0959a1;
 $colors: (
   "blue": $blue,
 );
+
+$font-family-base: TT Hoves;
+$enable-validation-icons: false;
+
+$grid-gutter-width: 1.875rem;
+$border-radius: 20px;
+$form-check-input-border-radius: 0;
+$btn-padding-y: 0.563rem;
+$input-padding-y: 0.5625rem;
+$input-placeholder-color: $blue;
+$form-check-input-border: 1px solid $blue;
 
 $input-border-color: $blue;
 $border-color: $blue;

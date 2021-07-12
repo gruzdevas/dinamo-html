@@ -3,3 +3,17 @@
 <path d="M22.8721 0L25.0303 6.67981H32.0212L26.3606 10.9469L28.5251 17.6912L22.8721 13.6L17.2121 17.7407L19.3792 10.9388L13.7249 6.67981H20.7157L22.8721 0Z" fill="#BFA069"/>
 <path d="M42.3956 0L44.5529 6.68093H51.5422L45.8871 10.9488L48.0551 17.6942L42.3956 13.6022L36.7405 17.7436L38.9047 10.9406L33.2458 6.68093H40.2395L42.3956 0Z" fill="#BFA069"/>
 </svg>
+
+
+<div class="col-lg-6">
+                <div class="input_fields_wrap is-invalid">
+                  <div class="label_wrap">
+                    <label for="checkin__password" class="form-label">Новый пароль<sup>*</sup></label>
+                    <div class="invalid_feedback">Обязательное поле</div>
+                  </div>
+                  <input type="password" class="form-control checkin__password__input-2" id="checkin__password"
+                    value="PasswordFake" required>
+                </div>
+
+								
+              </div>
