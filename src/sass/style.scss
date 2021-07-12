@@ -37,6 +37,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "TT Hovest";
+  src: url("../fonts/TTHoves-Light.eot");
+  src: local("☺"), url("../fonts/TTHoves-Light.woff") format("woff"),
+    url("../fonts/TTHoves-Light.ttf") format("truetype"),
+    url(".//fonts/TTHoves-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
 a[href^="mailto:"],
 a[href^="tel:"] {
   white-space: nowrap;
@@ -74,10 +84,17 @@ a[href^="mailto:"] {
   display: none;
 }
 
-.is-invalid {
+.is_invalid {
+  .form-control::placeholder {
+    color: $red;
+  }
+
   .invalid_feedback {
     display: block;
     color: $red;
+  }
+  .form-check-input {
+    border-color: $red;
   }
 
   .form-control {
@@ -168,6 +185,13 @@ a.btn {
     font-size: 26px;
     line-height: 32px;
     margin-bottom: 18px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      margin-top: 48px;
+    }
   }
 
   &__descr {
@@ -213,7 +237,7 @@ a.btn {
       background-position: right $input-height-inner-quarter center;
       background-size: $input-height-inner-half $input-height-inner-half;
 
-      .is-invalid & {
+      .is_invalid & {
         background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11.5' r='2.75' stroke='%23EB5757' stroke-width='1.5'/%3E%3Cpath d='M20.5 11.5C18.6658 7.92524 15.0993 5.5 11 5.5C6.90074 5.5 3.33417 7.92524 1.5 11.5' stroke='%23EB5757' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
       }
     }
