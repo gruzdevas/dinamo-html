@@ -7,6 +7,36 @@
 @import "global";
 @import "blocks";
 
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Regular.eot");
+  src: local("☺"), url("../fonts/TTHoves-Regular.woff") format("woff"),
+    url("../fonts/TTHoves-Regular.ttf") format("truetype"),
+    url("../fonts/TTHoves-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-Medium.eot");
+  src: local("☺"), url("../fonts/TTHoves-Medium.woff") format("woff"),
+    url("../fonts/TTHoves-Medium.ttf") format("truetype"),
+    url("../fonts/TTHoves-Medium.svg") format("svg");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Hoves";
+  src: url("../fonts/TTHoves-DemiBold.eot");
+  src: local("☺"), url("../fonts/TTHoves-DemiBold.woff") format("woff"),
+    url("../fonts/TTHoves-DemiBold.ttf") format("truetype"),
+    url("../fonts/TTHoves-DemiBold.svg") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
 a[href^="mailto:"],
 a[href^="tel:"] {
   white-space: nowrap;
@@ -25,16 +55,29 @@ a[href^="mailto:"] {
   border-radius: 0;
 }
 
+.is-invalid {
+  color: $red;
+
+  & ~ * {
+    color: $red;
+  }
+
+  & ~ .input-group-text {
+    border-color: $red;
+  }
+}
+
 a.btn {
   text-decoration: none;
 }
 
 .site-header {
   padding: 10px 0 9px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   @include media-breakpoint-up(lg) {
     padding: 19px 0 18px;
+    margin-bottom: 20px;
   }
 
   &__logo {
@@ -65,15 +108,18 @@ a.btn {
 
 .checkin {
   &__header {
-    padding-bottom: 20px;
-    // margin-bottom: 20px;
+    padding-bottom: 8px;
     border-bottom: 1px solid $blue;
+    margin-bottom: 18px;
 
     @include media-breakpoint-up(lg) {
       border-bottom: 0;
+      padding-bottom: 0;
     }
+
     @include media-breakpoint-up(xl) {
       border-bottom: 1px solid $blue;
+      padding-bottom: 18px;
     }
   }
 
@@ -83,6 +129,11 @@ a.btn {
     font-size: 36px;
     line-height: 40px;
     margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 56px;
+      line-height: 60px;
+    }
   }
 
   &__subtitle {
@@ -90,7 +141,7 @@ a.btn {
     font-weight: 600;
     font-size: 26px;
     line-height: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   &__descr {
@@ -126,13 +177,13 @@ a.btn {
 
   &__password {
     &__input {
-      border-right-color: transparent;
+      border-right-color: transparent !important;
     }
 
     &__icon {
       background-color: transparent;
       border-radius: 0;
-      border-left-color: transparent;
+      border-left-color: transparent !important;
     }
   }
 
