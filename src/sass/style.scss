@@ -56,6 +56,12 @@ input[type="date"] {
   box-shadow: none;
 }
 
+.form-check-input {
+  width: 12px;
+  height: 12px;
+  background-size: auto;
+}
+
 .label_wrap {
   display: flex;
   justify-content: space-between;
