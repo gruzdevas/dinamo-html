@@ -4,7 +4,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 960px,
   xl: 1440px,
-  xxl: 1400px,
+  xxl: 1920px,
 );
 
 $container-max-widths: (
@@ -12,7 +12,7 @@ $container-max-widths: (
   md: 720px,
   lg: 928px,
   xl: 1380px,
-  xxl: 1320px,
+  xxl: 1840px,
 );
 
 $gold: #bfa069;
@@ -20,6 +20,7 @@ $red: #eb5757;
 $white: #fff;
 
 $gray-100: #fafafa;
+$light: $gray-100;
 
 $blue: #0959a1;
 $colors: (
@@ -27,8 +28,10 @@ $colors: (
 );
 
 $primary: #0959a1;
+
 $theme-colors: (
   "primary": $primary,
+  "light": $light,
 );
 
 $blue: $primary;

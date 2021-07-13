@@ -133,8 +133,18 @@ a.btn {
 }
 
 .pic {
+  margin-bottom: 20px;
+
   @include media-breakpoint-only(lg) {
     padding-right: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 20px;
   }
 
   &__wrap {
@@ -142,7 +152,6 @@ a.btn {
     display: flex;
     min-height: 180px;
     color: $white;
-    margin-bottom: 20px;
 
     @include media-breakpoint-up(sm) {
       min-height: 240px;
@@ -151,7 +160,7 @@ a.btn {
     @include media-breakpoint-up(lg) {
       min-height: 350px;
       height: 100%;
-      margin-bottom: 0;
+      // margin-bottom: 0;
     }
   }
 
@@ -161,7 +170,10 @@ a.btn {
 
     @include media-breakpoint-up(sm) {
       width: 90px;
-      height: auto;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 118px;
     }
   }
 }
@@ -222,6 +234,10 @@ a.btn {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 28px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
 
     &__text {
       margin-bottom: 20px;
