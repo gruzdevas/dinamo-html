@@ -19,31 +19,11 @@
 
 @font-face {
   font-family: "TT Hoves";
-  src: url("../fonts/TTHoves-Medium.eot");
-  src: local("☺"), url("../fonts/TTHoves-Medium.woff") format("woff"),
-    url("../fonts/TTHoves-Medium.ttf") format("truetype"),
-    url("../fonts/TTHoves-Medium.svg") format("svg");
-  font-weight: medium;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Hoves";
   src: url("../fonts/TTHoves-DemiBold.eot");
   src: local("☺"), url("../fonts/TTHoves-DemiBold.woff") format("woff"),
     url("../fonts/TTHoves-DemiBold.ttf") format("truetype"),
     url("../fonts/TTHoves-DemiBold.svg") format("svg");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Hovest";
-  src: url("../fonts/TTHoves-Light.eot");
-  src: local("☺"), url("../fonts/TTHoves-Light.woff") format("woff"),
-    url("../fonts/TTHoves-Light.ttf") format("truetype"),
-    url(".//fonts/TTHoves-Light.svg") format("svg");
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -143,9 +123,29 @@ a.btn {
   &__wrap {
     background: $blue;
     display: flex;
-    min-height: 240px;
+    min-height: 180px;
     color: $white;
     margin-bottom: 20px;
+
+    @include media-breakpoint-up(sm) {
+      min-height: 240px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-height: 350px;
+      height: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    width: 65px;
+    height: auto;
+
+    @include media-breakpoint-up(sm) {
+      width: 90px;
+      height: auto;
+    }
   }
 }
 
@@ -163,6 +163,14 @@ a.btn {
     @include media-breakpoint-up(xl) {
       border-bottom: 1px solid $blue;
       padding-bottom: 18px;
+    }
+  }
+
+  &__column-info {
+    @include media-breakpoint-only(lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -190,7 +198,6 @@ a.btn {
       font-size: 36px;
       line-height: 40px;
       letter-spacing: 0.02em;
-      margin-top: 48px;
     }
   }
 
