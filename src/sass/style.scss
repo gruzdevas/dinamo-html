@@ -41,8 +41,19 @@ a[href^="mailto:"] {
   }
 }
 
+input[type="date"] {
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
 .form-control {
   border-radius: 0;
+}
+
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: none;
 }
 
 .label_wrap {
