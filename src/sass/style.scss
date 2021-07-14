@@ -110,7 +110,7 @@ a.btn {
 
 .site-header {
   padding: 10px 0 9px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 
   @include media-breakpoint-up(lg) {
     padding: 19px 0 18px;
@@ -135,6 +135,7 @@ a.btn {
 
   @include media-breakpoint-only(lg) {
     padding-right: 0;
+    padding-left: 0;
   }
 
   @include media-breakpoint-up(lg) {
@@ -183,23 +184,42 @@ a.btn {
 
 .checkin {
   &__header {
-    padding-bottom: 8px;
+    padding-bottom: 13px;
     border-bottom: 1px solid $blue;
     margin-bottom: 18px;
 
     @include media-breakpoint-up(lg) {
-      border-bottom: 0;
-      padding-bottom: 0;
+      padding-bottom: 18px;
+      margin-bottom: 0;
     }
 
     @include media-breakpoint-up(xl) {
       border-bottom: 1px solid $blue;
-      padding-bottom: 18px;
       margin-bottom: 0;
     }
   }
 
   &__info {
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+        border-top: 1px solid $blue;
+        margin-right: calc(var(--bs-gutter-x) * -0.5);
+        margin-left: calc(var(--bs-gutter-x) * -0.5);
+      }
+    }
+
+    @include media-breakpoint-only(lg) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
     @include media-breakpoint-up(xl) {
       border-left: 1px solid $blue;
       padding-top: 20px;
@@ -273,12 +293,12 @@ a.btn {
   &__form {
     padding-top: 50px;
     padding-bottom: 50px;
-    border-top: 1px solid $blue;
+    // border-top: 1px solid $blue;
 
     @include media-breakpoint-up(lg) {
       padding-top: 20px;
       padding-bottom: 30px;
-      border-bottom: 1px solid $blue;
+      // border-bottom: 1px solid $blue;
     }
 
     @include media-breakpoint-up(xl) {
