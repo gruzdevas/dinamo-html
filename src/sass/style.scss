@@ -57,8 +57,6 @@ input[type="date"] {
 }
 
 .form-check-input {
-  width: 12px;
-  height: 12px;
   background-size: auto;
 }
 
@@ -150,8 +148,9 @@ a.btn {
   &__wrap {
     background: $blue;
     display: flex;
-    min-height: 180px;
     color: $white;
+    padding-top: 10.4%;
+    padding-bottom: 13.64%;
 
     @include media-breakpoint-up(sm) {
       min-height: 240px;
@@ -160,7 +159,11 @@ a.btn {
     @include media-breakpoint-up(lg) {
       min-height: 350px;
       height: 100%;
-      // margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      min-height: 240px;
+      height: auto;
     }
   }
 
@@ -192,6 +195,19 @@ a.btn {
     @include media-breakpoint-up(xl) {
       border-bottom: 1px solid $blue;
       padding-bottom: 18px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    @include media-breakpoint-up(xl) {
+      border-left: 1px solid $blue;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-bottom: 102px;
     }
   }
 
@@ -200,6 +216,8 @@ a.btn {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 
