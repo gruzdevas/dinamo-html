@@ -200,9 +200,9 @@ a.btn {
   }
 
   &__info {
-    position: relative;
+    @include media-breakpoint-only(lg) {
+      position: relative;
 
-    @include media-breakpoint-up(lg) {
       &::before {
         content: "";
         position: absolute;
@@ -236,8 +236,8 @@ a.btn {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
   }
 
@@ -278,7 +278,7 @@ a.btn {
     }
 
     &__text {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
   }
 
@@ -291,14 +291,14 @@ a.btn {
   }
 
   &__form {
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 50px;
-    // border-top: 1px solid $blue;
+    border-top: 1px solid $blue;
 
     @include media-breakpoint-up(lg) {
       padding-top: 20px;
       padding-bottom: 30px;
-      // border-bottom: 1px solid $blue;
+      border-top: 0;
     }
 
     @include media-breakpoint-up(xl) {
