@@ -130,6 +130,50 @@ a.btn {
   }
 }
 
+.title {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+.subtitle {
+  overflow: hidden;
+
+  &__txt {
+    text-align: center;
+    overflow: hidden;
+    line-height: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 24px;
+
+    &::after,
+    &::before {
+      content: "";
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+      height: 1px;
+      background-color: $blue;
+    }
+
+    &::before {
+      margin-left: -100%;
+      left: -1.5%;
+    }
+
+    &::after {
+      margin-right: -100%;
+      right: -1.5%;
+    }
+  }
+}
+
 .pic {
   margin-bottom: 20px;
 
@@ -335,6 +379,36 @@ a.btn {
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+}
+
+.auth {
+  &__header {
+    border-bottom: 1px solid $blue;
+    margin-bottom: 30px;
+  }
+}
+
+.socials {
+  margin-bottom: 10px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  svg {
+    max-width: 100%;
   }
 }
 
