@@ -138,6 +138,14 @@ a.btn {
       }
     }
   }
+
+  .auth__page & {
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 70px;
+    }
+  }
 }
 
 .title {
@@ -148,6 +156,7 @@ a.btn {
   text-transform: uppercase;
   margin-bottom: 0;
   padding-bottom: 15px;
+  padding-top: 15px;
 
   @include media-breakpoint-up(lg) {
     font-weight: 600;
@@ -404,10 +413,11 @@ a.btn {
   margin-bottom: 50px;
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 105px;
+    margin-bottom: 70px;
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 35px;
   }
 
   &__header {
