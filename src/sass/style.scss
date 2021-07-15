@@ -154,11 +154,13 @@ a.btn {
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $blue;
   padding-bottom: 15px;
   padding-top: 15px;
 
   @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
     font-weight: 600;
     font-size: 36px;
     line-height: 40px;
@@ -421,9 +423,6 @@ a.btn {
   }
 
   &__header {
-    border-bottom: 1px solid $blue;
-    margin-bottom: 30px;
-
     @include media-breakpoint-up(lg) {
       margin-bottom: 40px;
     }
@@ -431,7 +430,7 @@ a.btn {
 }
 
 .socials {
-  margin-bottom: 10px;
+  margin-bottom: 22px;
 
   &__list {
     display: flex;
