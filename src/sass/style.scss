@@ -11,20 +11,25 @@
   font-family: "TT Hoves";
   src: url("../fonts/TTHoves-Regular.eot");
   src: local("☺"), url("../fonts/TTHoves-Regular.woff") format("woff"),
-    url("../fonts/TTHoves-Regular.ttf") format("truetype"),
-    url("../fonts/TTHoves-Regular.svg") format("svg");
+    url("../fonts/TTHoves-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "TT Hoves";
   src: url("../fonts/TTHoves-DemiBold.eot");
   src: local("☺"), url("../fonts/TTHoves-DemiBold.woff") format("woff"),
-    url("../fonts/TTHoves-DemiBold.ttf") format("truetype"),
-    url("../fonts/TTHoves-DemiBold.svg") format("svg");
+    url("../fonts/TTHoves-DemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
+}
+
+.g-3,
+.gy-3 {
+  --bs-gutter-y: 1.25rem;
 }
 
 a[href^="mailto:"],
@@ -143,6 +148,14 @@ a.btn {
   text-transform: uppercase;
   margin-bottom: 0;
   padding-bottom: 15px;
+
+  @include media-breakpoint-up(lg) {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    padding-bottom: 20px;
+  }
 }
 
 .subtitle {
@@ -388,9 +401,22 @@ a.btn {
 }
 
 .auth {
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 105px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__header {
     border-bottom: 1px solid $blue;
     margin-bottom: 30px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 40px;
+    }
   }
 }
 
