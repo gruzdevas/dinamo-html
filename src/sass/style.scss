@@ -87,7 +87,12 @@ input[type="date"] {
   .invalid_feedback {
     display: block;
     color: $red;
+
+    &_nochangecolor {
+      color: $blue;
+    }
   }
+
   .form-check-input {
     border-color: $red;
   }
