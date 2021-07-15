@@ -114,6 +114,16 @@ input[type="date"] {
   }
 }
 
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 a.btn {
   text-decoration: none;
 }
@@ -398,16 +408,6 @@ a.btn {
       border-radius: 0;
       border-left-color: transparent !important;
     }
-  }
-
-  &__btn {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
   }
 }
 
