@@ -32,7 +32,8 @@ $spacers: (
 $gold: #bfa069;
 $red: #eb5757;
 $white: #fff;
-
+$blue-10: rgba(9, 89, 161, 0.1);
+$gray-dark: #8fa2b3;
 $gray-100: #fafafa;
 $light: $gray-100;
 
@@ -49,10 +50,12 @@ $theme-colors: (
 );
 
 $blue: $primary;
+
 $body-color: $blue;
 $font-family-base: TT Hoves;
 $enable-validation-icons: false;
 
+$input-focus-border-color: $blue;
 $border-radius: 20px;
 $form-check-input-border-radius: 0;
 $btn-padding-y: 0.563rem;
