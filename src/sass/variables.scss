@@ -15,7 +15,7 @@ $container-max-widths: (
   xxl: 1840px,
 );
 
-$grid-gutter-width: 1.875rem;
+$grid-gutter-width: 1.875rem; /* Устанавливает для .row отступы */
 
 $spacer: 1rem;
 $spacers: (
@@ -26,8 +26,6 @@ $spacers: (
   4: $spacer * 1.5,
   5: $spacer * 2.5,
 );
-
-// $grid-gutter-width: 1.5rem;
 
 $gold: #bfa069;
 $red: #eb5757;

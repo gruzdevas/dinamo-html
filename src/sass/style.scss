@@ -32,13 +32,13 @@
   --bs-gutter-y: 1.25rem;
 }
 
-// .container-fluid {
-//   --bs-gutter-x: 15px;
+.container-fluid {
+  --bs-gutter-x: 15px;
 
-//   @include media-breakpoint-up(sm) {
-//     --bs-gutter-x: 20px;
-//   }
-// }
+  @include media-breakpoint-up(lg) {
+    --bs-gutter-x: 20px;
+  }
+}
 
 a:hover {
   text-decoration: none;
@@ -243,7 +243,6 @@ a.btn {
 
   @include media-breakpoint-only(lg) {
     padding-right: 0;
-    padding-left: 0;
   }
 
   @include media-breakpoint-up(lg) {
@@ -318,14 +317,9 @@ a.btn {
         right: 0;
         display: block;
         border-top: 1px solid $blue;
-        margin-right: calc(var(--bs-gutter-x) * -0.5);
-        margin-left: calc(var(--bs-gutter-x) * -0.5);
+        // margin-right: calc(var(--bs-gutter-x) * -0.5);
+        // margin-left: calc(var(--bs-gutter-x) * -0.5);
       }
-    }
-
-    @include media-breakpoint-only(lg) {
-      padding-right: 0;
-      padding-left: 0;
     }
 
     @include media-breakpoint-up(xl) {
@@ -466,6 +460,10 @@ a.btn {
     }
   }
 
+  &__link {
+    display: block;
+  }
+
   svg {
     max-width: 100%;
   }
@@ -481,6 +479,7 @@ a.btn {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $gray-dark;
+    margin-bottom: 22px;
   }
 }
 
@@ -513,6 +512,25 @@ a.btn {
     line-height: 1;
     text-align: center;
     padding: 0;
+  }
+
+  &__btn {
+    margin-bottom: 22px;
+  }
+
+  &__page {
+    .site-header {
+      margin-bottom: 0;
+    }
+
+    .footer {
+      display: none;
+    }
+  }
+
+  .step-1 &__code,
+  .step-2 &__code {
+    display: none;
   }
 }
 
