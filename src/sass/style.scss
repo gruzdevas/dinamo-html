@@ -147,6 +147,12 @@ input[type="date"] {
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  &-outline-primary:disabled,
+  &-outline-primary.disabled {
+    color: $gray-dark;
+    border-color: $gray-cold;
+  }
 }
 
 a.btn {
@@ -428,11 +434,6 @@ a.btn {
   @include media-breakpoint-up(lg) {
     @extend .w-lg;
     margin-bottom: 70px;
-
-    // max-width: 480px;
-    // margin-left: auto;
-    // margin-right: auto;
-    // padding-bottom: 35px;
   }
 
   &__header {
@@ -474,6 +475,13 @@ a.btn {
   padding-bottom: 20px;
   box-shadow: 0px -4px 4px 0px $blue-10;
 
+  @include media-breakpoint-up(lg) {
+    box-shadow: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+
   &__txt {
     text-align: center;
     letter-spacing: 1px;
@@ -487,8 +495,10 @@ a.btn {
   @extend .w-lg;
 
   &__title {
+    margin-bottom: 20px;
+
     @include media-breakpoint-up(lg) {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
   }
 
@@ -549,7 +559,7 @@ a.btn {
 
   &_wrap {
     position: relative;
-    margin: 30px 0;
+    margin-bottom: 55px;
   }
 
   &_point {
@@ -557,20 +567,29 @@ a.btn {
     width: 10px;
     height: 10px;
     border-radius: 50rem;
-    background-color: $gray-cold;
+    background-color: $white;
     border: 1px solid $blue;
-    // transform: translateY(-50%);
 
     &:first-child {
       transform: translateY(-50%);
+      background-color: $blue;
+    }
+
+    &:nth-child(2) {
+      transform: translateY(-50%);
+
+      .step-1 &,
+      .step-2 & {
+        background-color: $gray-cold;
+      }
+
+      .step-3 & {
+        background-color: $blue;
+      }
     }
 
     &:last-child {
       right: 0;
-      transform: translateY(-50%);
-    }
-
-    &:nth-child(2) {
       transform: translateY(-50%);
     }
   }
@@ -584,6 +603,10 @@ a.btn {
 
     &:last-child {
       transform: translateX(-100%);
+    }
+
+    &:nth-last-of-type(2) {
+      transform: translateX(-50%);
     }
   }
 }
