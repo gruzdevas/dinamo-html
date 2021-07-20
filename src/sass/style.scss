@@ -494,6 +494,12 @@ a.btn {
 .password-recovery {
   @extend .w-lg;
 
+  &__email-wrap {
+    .step-2 & {
+      display: none;
+    }
+  }
+
   &__title {
     margin-bottom: 20px;
 
@@ -505,7 +511,7 @@ a.btn {
   &__list {
     display: flex;
     flex-wrap: nowrap;
-    margin: 0 -5px;
+    margin: 0 -5px 10px;
     justify-content: center;
   }
 
@@ -530,6 +536,20 @@ a.btn {
     padding: 0;
   }
 
+  &__code {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__send-code {
+    text-align: center;
+
+    .data-empty & {
+      color: $gray-dark;
+    }
+  }
+
   &__btn {
     margin-bottom: 22px;
   }
@@ -544,8 +564,7 @@ a.btn {
     }
   }
 
-  .step-1 &__code,
-  .step-2 &__code {
+  .step-1 &__code {
     display: none;
   }
 }
@@ -559,7 +578,7 @@ a.btn {
 
   &_wrap {
     position: relative;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   &_point {
