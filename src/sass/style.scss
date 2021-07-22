@@ -492,6 +492,7 @@ a.btn {
   padding-top: 20px;
   padding-bottom: 20px;
   box-shadow: 0px -4px 4px 0px $blue-10;
+  margin-top: auto;
 
   @include media-breakpoint-up(lg) {
     box-shadow: none;
@@ -505,11 +506,12 @@ a.btn {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $gray-dark;
-    margin-bottom: 22px;
+    // margin-bottom: 22px;
   }
 }
 
 .password-recovery {
+  $this: &;
   @extend .w-lg;
 
   &__code {
@@ -607,10 +609,29 @@ a.btn {
 
     .footer {
       display: none;
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      main,
+      main > *,
+      #{$this}__form,
+      #{$this}__form > *,
+      form,
+      form > *,
+      .step-3 #{$this}__password-wrap {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
     }
   }
 
-  .step-1 &__code {
+  .step-1 &__code,
+  .step-1 &__password-wrap {
     display: none;
   }
 }
