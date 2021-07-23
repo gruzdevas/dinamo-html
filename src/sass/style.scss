@@ -506,7 +506,6 @@ a.btn {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $gray-dark;
-    // margin-bottom: 22px;
   }
 }
 
@@ -524,6 +523,16 @@ a.btn {
 
     .step-2 & {
       display: block;
+    }
+  }
+
+  &__send-btn {
+    text-decoration: none;
+    text-transform: none;
+    padding: 0;
+
+    &:hover {
+      color: inherit;
     }
   }
 
@@ -595,13 +604,9 @@ a.btn {
     }
   }
 
-  &__send-code {
-    text-align: center;
-
-    .data-empty & {
-      color: $gray-dark;
-    }
-  }
+  // &__send-code {
+  //   text-align: center;
+  // }
 
   &__btn {
     margin-bottom: 22px;
