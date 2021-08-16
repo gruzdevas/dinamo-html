@@ -437,6 +437,35 @@ a.btn {
       border-bottom: 0;
     }
   }
+
+  &__welcome {
+    text-align: center;
+    padding-top: 66px;
+    padding-bottom: 50px;
+    border-top: 1px solid $blue;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 20px;
+      padding-bottom: 30px;
+      border-top: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border-top: 0;
+      border-bottom: 0;
+    }
+
+    &_txt {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+  }
+
+  &__nav {
+  }
 }
 
 .auth {
