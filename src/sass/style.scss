@@ -118,6 +118,10 @@ input[type="date"] {
   box-shadow: none;
 }
 
+.form-check-input:checked[type="radio"] {
+  background-size: auto;
+}
+
 .label_wrap {
   display: flex;
   justify-content: space-between;
